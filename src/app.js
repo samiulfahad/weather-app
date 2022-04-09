@@ -18,7 +18,6 @@ app.get('',(req, res)=>{
 app.get('/weather',(req, mainRes)=> {
     if(req.query.s){
         geocode(req.query.s, (err,data)=>{
-            console.log(req.query.s)
            temp(err, data, mainRes)
         })
     }else{

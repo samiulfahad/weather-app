@@ -10,14 +10,12 @@ const geocode = async (loc, callback) => {
                 found: false
             }
             if(res.data.features.length===0){
-                console.log('Place not found')
                 return callback(undefined, data)
             }else{
                 data.found = true,
                 data.lon = res.data.features[0].center[0];
                 data.lat = res.data.features[0].center[1];
                 data.place_name = res.data.features[0].place_name;
-                //console.log(callback(undefined, data))
                 callback(undefined, data)
             }
     }
@@ -30,9 +28,8 @@ const geocode = async (loc, callback) => {
             console.log(e)
             return callback(errMessage, undefined)
         }
-     }   
+     }
 }
-// const geocode = (loc, callback) =>{
 //     const data = {
 //                 lon: 0,
 //                 lat: 0,
@@ -60,7 +57,7 @@ const geocode = async (loc, callback) => {
 //             const errMessage = 'API URL Error'
 //             console.log(e)
 //             return callback(errMessage, undefined)
-//         }  
+//         }
 //     })
 // }
 
