@@ -29,7 +29,10 @@ btn.addEventListener('click', (e)=>{
             m1.textContent = data.error
         }else {
             m1.textContent = "Your Result:"
-            m2.textContent = `temp: ${data.temp} & place: ${data.place}`
+            m2.innerHTML = `Current Temperature is ${data.temp} deg <br>
+            Place: ${data.place} <br>
+            Sunrise at ${data.sunrise} <br>
+            Sunset at ${data.sunset}`
         }
         input.value = ''
 
