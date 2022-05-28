@@ -16,6 +16,10 @@ hbs.registerPartials(path.join(__dirname, '../templates/partials'))
 app.get('',(req, res)=>{
     res.render('index')
 })
+app.get('/about',(req, res)=>{
+    res.render('about')
+})
+
 app.get('/weather',(req, mainRes)=> {
     if(req.query.s){
         geocode(req.query.s, (err,data)=>{
