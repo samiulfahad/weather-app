@@ -23,7 +23,7 @@ const temp = (err, data, mainRes) => {
                 feels: res.data.main.feels_like,
                 place: data.place_name,
                 sunRise,
-                sunSet2
+                sunSet
             })
         
             })
