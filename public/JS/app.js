@@ -2,6 +2,16 @@ const input = document.getElementById('input');
 const m2 = document.getElementById('m2')
 const m1 = document.getElementById('m1')
 const btn = document.getElementById('btn')
+let myInput = document.getElementById("input");
+
+myInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btn").click();
+  }
+});
+
+
 btn.addEventListener('click', (e)=>{
     m1.textContent = 'Loading....'
     m2.textContent = ''
