@@ -1,4 +1,3 @@
-console.log('git')
 const input = document.getElementById('input');
 const m2 = document.getElementById('m2')
 const m1 = document.getElementById('m1')
