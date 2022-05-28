@@ -15,15 +15,15 @@ const temp = (err, data, mainRes) => {
         }else{
             axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&units=metric&appid=e1bc1884bc3e485ff4bdaac7cc8963e0`)
             .then(res=>{
-            let sunrise2 = new Date( res.data.sys.sunrise *1000).toLocaleString('en-US', { hour: 'numeric', minute:'numeric', hour12: true})
-            let sunset2 = new Date( res.data.sys.sunset *1000).toLocaleString('en-US', { hour: 'numeric', minute:'numeric', hour12: true })
+            let sunRise = new Date( res.data.sys.sunrise *1000).toLocaleString('en-US', { hour: 'numeric', minute:'numeric', hour12: true})
+            let sunSet = new Date( res.data.sys.sunset *1000).toLocaleString('en-US', { hour: 'numeric', minute:'numeric', hour12: true })
             //document.write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
             return mainRes.send({
                 temp: res.data.main.temp,
                 feels: res.data.main.feels_like,
                 place: data.place_name,
-                sunrise2,
-                sunset2
+                sunRise,
+                sunSet2
             })
         
             })
