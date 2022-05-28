@@ -16,6 +16,9 @@ hbs.registerPartials(path.join(__dirname, '../templates/partials'))
 app.get('',(req, res)=>{
     res.render('index')
 })
+app.get('/home',(req, res)=>{
+    res.render('index')
+})
 app.get('/about',(req, res)=>{
     res.render('about')
 })
