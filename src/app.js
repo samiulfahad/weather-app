@@ -22,6 +22,9 @@ app.get('/home',(req, res)=>{
 app.get('/about',(req, res)=>{
     res.render('about')
 })
+app.get('/about2',(req, res)=>{
+    res.render('about2')
+})
 
 app.get('/weather',(req, mainRes)=> {
     if(req.query.s){
