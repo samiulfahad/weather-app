@@ -20,7 +20,7 @@ btn.addEventListener('click', (e)=>{
         return m1.textContent = 'Please Enter an Address'
     }
     // http://localhost:3000
-    const url = 'http://localhost:3000/weather?s='+ input.value
+    const url = '/weather?s='+ input.value
     fetch(url).then(res=>
     res.json().then(data=>{
         m1.textContent = ""
