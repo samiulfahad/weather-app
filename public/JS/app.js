@@ -31,7 +31,7 @@ btn.addEventListener('click', (e)=>{
         }else {
             m1.textContent = "Your Result:"
             m2.innerHTML = `Current Temperature is ${data.temp} deg <br>
-            Place: ${data.place} <br>
+            Place: ${data.place} <br>`
         }
         input.value = ''
 
