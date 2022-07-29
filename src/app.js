@@ -28,8 +28,8 @@ app.get('/about2',(req, res)=>{
 
 app.get('/weather',(req, mainRes)=> {
     if(req.query.s){
-        geocode(req.query.s, (err,data)=>{
-           temp(err, data, mainRes)
+        geocode(req.query.s, data =>{
+           temp (data, mainRes)
         })
     }else{
          mainRes.send({

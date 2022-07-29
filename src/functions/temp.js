@@ -1,9 +1,9 @@
 const { default: axios } = require("axios");
 const geocode = require('./geocode')
-const temp = (err, data, mainRes) => {
-    if(err){
+const temp = (data, mainRes) => {
+    if(data.errMessage){
         return mainRes.send({
-            error: err
+            errMessage: data.errMessage
         })
     } else{
         if(data.found===false){

@@ -16,18 +16,18 @@ btn.addEventListener('click', (e)=>{
     m1.textContent = 'Loading....'
     m2.textContent = ''
     e.preventDefault();
-    if(input.value===''){
+    if(input.value==='' ){
         return m1.textContent = 'Please Enter an Address'
     }
     // http://localhost:3000
-    const url = '/weather?s='+ input.value
+    const url = 'http://localhost:3000/weather?s='+ input.value
     fetch(url).then(res=>
     res.json().then(data=>{
         m1.textContent = ""
         if(data.NOT_Found){
             m1.textContent = data.NOT_Found
-        } else if(data.error){
-            m1.textContent = data.error
+        } else if(data.errMessage){
+            m1.textContent = data.errMessage
         }else {
             m1.textContent = "Your Result:"
             m2.innerHTML = `Current Temperature is ${data.temp} deg <br>
