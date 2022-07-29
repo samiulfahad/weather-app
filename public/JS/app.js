@@ -32,8 +32,6 @@ btn.addEventListener('click', (e)=>{
             m1.textContent = "Your Result:"
             m2.innerHTML = `Current Temperature is ${data.temp} deg <br>
             Place: ${data.place} <br>
-            Sunrise at ${data.sunrise} <br>
-            Sunset at ${data.sunset}`
         }
         input.value = ''
 
