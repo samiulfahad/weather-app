@@ -19,13 +19,6 @@ app.get('',(req, res)=>{
 app.get('/home',(req, res)=>{
     res.render('index')
 })
-app.get('/about',(req, res)=>{
-    res.render('about')
-})
-app.get('/about2',(req, res)=>{
-    res.render('about2')
-})
-
 app.get('/weather',(req, mainRes)=> {
     if(req.query.s){
         geocode(req.query.s, data =>{
@@ -38,6 +31,9 @@ app.get('/weather',(req, mainRes)=> {
     }
 })
 
+app.get('*', (req, res)=>{
+    res.render('404')
+})
 app.listen(port, ()=>{
     console.log('Listening on port '+port)
 })
